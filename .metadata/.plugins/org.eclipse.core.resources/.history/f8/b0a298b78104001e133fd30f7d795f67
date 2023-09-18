@@ -1,0 +1,14 @@
+package practice;
+
+public class GradingSystem {
+
+	public static void main(String[] args) {
+		int number = 30;
+		if (number < 100 && number >=90) {
+			System.out.println("Grade A");
+		}
+		
+
+	}
+
+}

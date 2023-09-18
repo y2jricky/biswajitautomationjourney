@@ -1,0 +1,26 @@
+package practice;
+
+public class Datatypes {
+
+	public static void main(String[] args) {
+		byte b = 10;
+		System.out.println(b);
+		
+		short s = 11;
+		System.out.println(s);
+		
+		int x = 45;
+		System.out.println(x);
+
+		long l = 98413494;
+		long l1 = 987142701024712094l;
+		System.out.println(l);
+		System.out.println(l1);
+		
+		float f = 67;
+		float f1 = 67.98f;
+		System.out.println(f);
+		
+	}
+
+}

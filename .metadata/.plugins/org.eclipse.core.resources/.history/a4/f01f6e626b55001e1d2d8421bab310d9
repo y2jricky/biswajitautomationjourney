@@ -1,0 +1,32 @@
+package seleniumbasics;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class OpencartRegistration_Second {
+	public static void main(String[] args) {
+
+		WebDriver driver = new ChromeDriver();
+
+		driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/register");
+		driver.manage().window().maximize();
+		
+		WebElement firstName= driver.findElement(By.id("input-firstname"));
+		firstName.sendKeys("Biswajit");
+		WebElement lastname= driver.findElement(By.id("input-lastname"));
+		firstName.sendKeys("Biswajit");
+		WebElement email= driver.findElement(By.id("input-email"));
+		firstName.sendKeys("Biswajit");
+		WebElement telephone= driver.findElement(By.id("input-telephone"));
+		firstName.sendKeys("Biswajit");
+		WebElement password= driver.findElement(By.id("input-password"));
+		firstName.sendKeys("Biswajit");
+		WebElement confirmPassword= driver.findElement(By.id("input-confirm"));
+		firstName.sendKeys("Biswajit");
+		
+		
+	}
+
+}

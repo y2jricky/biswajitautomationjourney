@@ -1,0 +1,26 @@
+package practice;
+
+public class GradingSystem {
+
+	public static void main(String[] args) {
+		int number = 29;
+		if (number < 100 && number >= 90) {
+			System.out.println("Grade A");
+			if (number == 100) {
+				System.out.println("You will get scholarship ");
+			}
+		} else if (number < 90 && number >= 70) {
+			System.out.println("Grade B");
+		} else if (number < 70 && number >= 50) {
+			System.out.println("Grade C");
+		} else if (number < 50 && number >= 30) {
+			System.out.println("Grade D");
+		} else if (number < 90) {
+			System.out.println("fail");
+		} else {
+			System.out.println("please enter valid mark");
+		}
+
+	}
+
+}

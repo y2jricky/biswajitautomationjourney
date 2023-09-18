@@ -1,0 +1,43 @@
+package seleniumbasics;
+
+import org.openqa.selenium.By;
+
+public class OpenCartTest {
+
+	public static void main(String[] args) {
+
+		String browser = "chrome";
+
+		BrowserUtil brUtil = new BrowserUtil();
+		brUtil.intiDriver(driver);
+
+		brUtil.launchURL("https://naveenautomationlabs.com/opencart/index.php?route=account/register");
+
+		String title = brUtil.getPageTitle();
+		System.out.println(title);
+		if (title.equalsIgnoreCase("Open cart")) {
+			System.out.println("PASS");
+		} else {
+			System.out.println("FAIL");
+		}
+
+		// Locators of element
+
+		By firstName = By.id("input-firstname");
+		By lastName = By.id("input-lastname");
+		By email = By.id("input-email");
+		By telephone = By.id("input-telephone");
+		By password = By.id("input-password");
+		By confirmPassword = By.id("input-confirm");
+		
+		ElementUtils elementUtil = new ElementUtils(driver);
+		elementUtil.doSendKeys(firstName, "Biswajit");
+		elementUtil.doSendKeys(lastName, "Mahapatra");
+		elementUtil.doSendKeys(email, "biswajit.ricky031@gmail.com");
+		elementUtil.doSendKeys(telephone, "9438065665");
+		elementUtil.doSendKeys(password, "@stoneCold316");
+		elementUtil.doSendKeys(confirmPassword, "@stoneCold316");
+		
+	}
+
+}

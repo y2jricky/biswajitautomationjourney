@@ -1,0 +1,20 @@
+package practice;
+
+public class Datatypes {
+
+	public static void main(String[] args) {
+		byte b = 10;
+		System.out.println(b);
+		
+		short s = 11;
+		System.out.println(s);
+		
+		int x = 45;
+		System.out.println(x);
+
+		long l = 98413494l;
+		System.out.println(l);
+		
+	}
+
+}

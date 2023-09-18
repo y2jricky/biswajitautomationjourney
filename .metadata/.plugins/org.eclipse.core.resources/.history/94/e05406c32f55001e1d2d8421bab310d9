@@ -1,0 +1,70 @@
+package seleniumbasics;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LocatorConcept {
+
+	static WebDriver driver;
+
+	public static void main(String[] args) {
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
+
+		// 1st Approach
+
+		driver.findElement(By.id("input-email")).sendKeys("test@gmail.com");
+		driver.findElement(By.id("input-password")).sendKeys("test@123");
+		driver.close();
+
+		// 2nd Approach
+		/*
+		 * WebElement email= driver.findElement(By.id("input-email")); WebElement
+		 * password= driver.findElement(By.id("input-password"));
+		 * 
+		 * email.sendKeys("test@gmail.com"); password.sendKeys("test@123");
+		 * 
+		 */
+
+		// 3rd approach By Locator
+		/*
+		 * By email = By.id("input-email"); By password = By.id("input-password");
+		 * 
+		 * WebElement eid= driver.findElement(email); WebElement pass=
+		 * driver.findElement(password);
+		 * 
+		 * eid.sendKeys("test@gmail.com"); eid.sendKeys("test@123");
+		 */
+
+		// 4th Approach By Locator and generic method for webelement
+
+		/*
+		 * By email = By.id("input-email"); By password = By.id("input-password");
+		 * 
+		 * getElement(email).sendKeys ("test@gmail.com");
+		 * getElement(password).sendKeys("test@123");
+		 */
+
+		// 5th Approach By Locator and generic method for webelement and actions
+
+		By email = By.id("input-email");
+		By password = By.id("input-password");
+		
+		doSendkeys(email, "test@gmail.com");
+		doSendkeys(password, "test@123");
+	}
+
+	public static WebElement getElement(By locator) {
+		return driver.findElement(locator);
+
+	}
+
+	public static void doSendkeys(By locator, String value) {
+		getElement(locator).sendKeys(value);
+	}
+
+}
